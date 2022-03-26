@@ -1,4 +1,4 @@
-# testowlint
+# Rick & Morty character search form
 
 ## Project setup
 ```
