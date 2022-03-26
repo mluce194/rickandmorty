@@ -6,19 +6,17 @@
   
 <div v-else class="w-4/5 mx-auto border-solid">
 <form>
-    <select name="characters" v-model="choix" class="focus:border-[#99cae9]">
-      <option value="">Pick your character</option>
-      <option v-for="character in result.characters.results" :key="character.id" :value="`${character.id}`">{{ character.name }}</option>
-    </select>
+
+    <label for="texte" class="block m-2">Search for a specific character</label>
+    <input type="text" v-model="inputCharacter" placeholder="Enter character name"/>
   </form>
 
-  <div class="w-4/5 mx-auto border-solid flex flex-wrap justify-around">
+  <div class="w-full mx-auto border-solid flex flex-wrap justify-around">
 
 
-<div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20" v-for="character in result.characters.results" :key="character.id" :id="character.id" :ref="character.id" v-show="choix==character.id">
-
+<div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20" v-for="character in result.characters.results" :key="character.id" v-show="setToLowerCase(character.name).startsWith(setToLowerCase(inputCharacter))">
   <div class="flex justify-center md:justify-end -mt-16">
-    <img class="w-20 h-20 object-cover rounded-full border-2 border-[#99cae9]" :src="`${character.image}`">
+    <img class="w-20 h-20 object-cover rounded-full border-2 border-[#99cae9]" :src="`${character.image}`" :alt="`${character.name}`">
   </div>
   <div>
     <h2 class="text-gray-800 text-3xl font-semibold">{{ character.name }}</h2>
@@ -68,7 +66,7 @@ const CHARACTERS_QUERY = gql`
 `
 
 export default {
-  name: 'ListOfAllCharacters',
+  name: 'SearchCharacterForm',
   setup () {
     const { result, loading, error } = useQuery(CHARACTERS_QUERY);
     return {
@@ -79,13 +77,14 @@ export default {
   },
   data() {
         return {
-            choix: "",
+            inputCharacter: "",
         };
     },
   methods: {
-        getCharacter() {
-            return this.choix;
-        }
+    setToLowerCase(item) {
+      return item.toLowerCase();
+    }
   }
+
 }
 </script>

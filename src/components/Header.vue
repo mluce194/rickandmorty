@@ -3,7 +3,7 @@
     <div class="md:flex justify-center py-16 ">
         <div class=" p-2 my-auto">
             <img class="rounded-full h-72 w-72 mx-auto border-8 border-white"
-                src="../assets/banniere.jpeg">
+                src="../assets/banniere.jpeg" alt="Formulaire de recherche personnages Rick and Morty">
         </div>
         <div class="p-8 my-auto">
             <h1 class="text-white text-3xl text-center">{{ title1 }}</h1>
