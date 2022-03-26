@@ -1,5 +1,9 @@
 # Rick & Morty character search form
 
+Personal project
+
+You can find the demo on this link: https://joyful-monstera-42dc3b.netlify.app/
+
 ## Project setup
 ```
 yarn install
