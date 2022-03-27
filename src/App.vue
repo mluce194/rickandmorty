@@ -3,10 +3,11 @@
     title1="Rick & Morty - Character search form"
     title2="Look for Rick and Morty Characters by searching through our database"
     :image="require('./assets/img/banniere.jpeg')"
+    imageDescription="Rick and Morty character search form"
   />
 
   <SearchCharacterForm></SearchCharacterForm>
-  <Footer texte="Powered by VueJS & TailwndCSS"></Footer>
+  <Footer texte="Powered by VueJS, TailwndCSS & Apollo GraphQL" credits="Photo credits: Wikipedia Commons"></Footer>
 </template>
 
 <script>

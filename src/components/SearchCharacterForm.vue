@@ -14,9 +14,10 @@
       <input
         type="text"
         v-model="inputCharacter"
-        placeholder="Enter character name"
+        placeholder="Enter character name" @change="characterInDb()"
       />
     </form>
+
 
     <!-- Character card start -->
     <div class="w-full mx-auto border-solid flex flex-wrap justify-around">
@@ -24,11 +25,7 @@
         class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20"
         v-for="character in result.characters.results"
         :key="character.id"
-        v-show="
-          setToLowerCase(character.name).startsWith(
-            setToLowerCase(inputCharacter)
-          )
-        "
+        v-show="checkCharacter(inputCharacter, character.name)"
       >
         <div class="flex justify-center md:justify-end -mt-16">
           <img
@@ -70,6 +67,7 @@
 </template>
 
 <script>
+
 import gql from "graphql-tag";
 import { useQuery } from "@vue/apollo-composable";
 
@@ -87,6 +85,7 @@ const CHARACTERS_QUERY = gql`
         episode {
           episode
         }
+        id
       }
     }
   }
@@ -108,9 +107,12 @@ export default {
     };
   },
   methods: {
-    setToLowerCase(item) {
-      return item.toLowerCase();
+    checkCharacter(input, character) {
+      if(character.toLowerCase().startsWith(input.toLowerCase())) {
+        return true
+      }
     },
   },
 };
+
 </script>

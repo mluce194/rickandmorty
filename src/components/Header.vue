@@ -5,7 +5,7 @@
         <img
           class="rounded-full h-72 w-72 mx-auto border-8 border-white"
           :src="`${image}`"
-          alt="Formulaire de recherche de personnages Rick and Morty"
+          :alt="`${imageDescription}`"
         />
       </div>
       <div class="p-8 my-auto">
@@ -22,7 +22,8 @@ export default {
   props: {
     title1: String,
     title2: String,
-    image: String
+    image: String,
+    imageDescription: String
   },
 };
 </script>
