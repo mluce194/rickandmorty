@@ -1,8 +1,10 @@
 # Rick & Morty character search form
 
-**Personal project** : the application is connected to a Rick and Morty API: you can enter a Rick & Morty character name in the search form and the application shows you the matching character card.
+**How it works** : the application is connected to a Rick and Morty API. You can enter a Rick & Morty character name in the search form and the application shows you the matching character card.
 
-**Demo** : A demo is visible here: https://joyful-monstera-42dc3b.netlify.app/
+**How it was made**: the application uses VueJS version 3 and is connected to an Apollo Rick & Morty API.
+
+**What it looks like** : A **demo** is visible here: https://joyful-monstera-42dc3b.netlify.app/
 
 ## Project setup
 ```
