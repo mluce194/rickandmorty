@@ -23,7 +23,7 @@ export default {
     title1: String,
     title2: String,
     image: String,
-    imageDescription: String
+    imageDescription: String,
   },
 };
 </script>

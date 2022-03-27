@@ -66,7 +66,6 @@
 </template>
 
 <script>
-
 import gql from "graphql-tag";
 import { useQuery } from "@vue/apollo-composable";
 
@@ -107,11 +106,10 @@ export default {
   },
   methods: {
     checkCharacter(input, character) {
-      if(character.toLowerCase().startsWith(input.toLowerCase())) {
-        return true
+      if (character.toLowerCase().startsWith(input.toLowerCase())) {
+        return true;
       }
-    }
+    },
   },
 };
-
 </script>
