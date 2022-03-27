@@ -14,10 +14,9 @@
       <input
         type="text"
         v-model="inputCharacter"
-        placeholder="Enter character name" @change="characterInDb()"
+        placeholder="Enter character name"
       />
     </form>
-
 
     <!-- Character card start -->
     <div class="w-full mx-auto border-solid flex flex-wrap justify-around">
@@ -48,7 +47,7 @@
           <p class="mt-2 text-gray-600">
             <strong>Episodes</strong> :
             <span
-              class="mt-2 text-gray-600 after:content-['-']"
+              class="mt-2 text-gray-600 after:content-['-'] last:after:content-['']"
               v-for="episode in character.episode"
               :key="episode"
               >{{ episode.episode }}</span
@@ -111,7 +110,7 @@ export default {
       if(character.toLowerCase().startsWith(input.toLowerCase())) {
         return true
       }
-    },
+    }
   },
 };
 
