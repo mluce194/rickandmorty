@@ -1,6 +1,6 @@
 # Rick & Morty character search form
 
-Personal project : the application is connected to a Rick and Morty API and enables you to search for a Rick and Moerty character
+**Personal project** : the application is connected to a Rick and Morty API and enables you to search for a Rick and Morty character
 
 You can find the demo on this link: https://joyful-monstera-42dc3b.netlify.app/
 
