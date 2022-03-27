@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../viteForTestOwlint/vite-project"
+		}
+	],
+	"settings": {}
+}
