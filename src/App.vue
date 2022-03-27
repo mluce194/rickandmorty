@@ -7,7 +7,7 @@
   />
 
   <SearchCharacterForm></SearchCharacterForm>
-  <Footer texte="Powered by VueJS, TailwndCSS & Apollo GraphQL" credits="Photo credits: Wikipedia Commons"></Footer>
+  <Footer texte="Powered by VueJS, TailwndCSS & Apollo" credits="Photo credits: Wikipedia Commons"></Footer>
 </template>
 
 <script>
